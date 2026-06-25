@@ -546,12 +546,12 @@ footer {
 }
 /* "Bilgisayar Mühendisliği" başlığını düzelt */
 @media screen and (max-width: 600px) {
-    /* Başlığı hedefle */
+    /* Başlığı hedef al ve sıkışmayı zorla çöz */
     h1 {
-        font-size: 26px !important;    /* Biraz küçültüyoruz */
-        letter-spacing: -0.5px !important; /* Harflerin birbirine girmesini engelle */
-        line-height: 1.1 !important;    /* Satır aralığını biraz aç */
-        word-break: break-word !important; /* Kelimenin parçalanmasını engelle */
-        margin-bottom: 15px !important; /* Altındaki metinle arasına boşluk koy */
+        font-size: 24px !important;
+        white-space: normal !important; /* Yazının alt satıra geçmesine izin ver */
+        letter-spacing: normal !important; /* Harf aralıklarını sıfırla */
+        display: block !important;
+        width: 100% !important;
     }
 }
