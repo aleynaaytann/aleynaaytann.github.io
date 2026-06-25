@@ -524,30 +524,4 @@ footer {
     align-items: center;
     gap: 8px; /* Ok işaretini metne göre hizalar */
 }
-/* Telefonlar için özel tasarım (Responsive) */
-@media screen and (max-width: 768px) {
-    /* 1. Menüyü dikey yap ve boşlukları düzenle */
-    .nav-links {
-        flex-direction: column !important;
-        gap: 10px !important;
-        margin-top: 20px !important;
-    }
 
-    /* 2. Başlıkları küçült */
-    h1 {
-        font-size: 28px !important; /* Başlığın telefonda taşmasını engeller */
-    }
-
-    /* 3. Paragraf yazıları daha okunaklı olsun */
-    p {
-        font-size: 15px !important;
-        padding: 0 15px !important;
-    }
-
-    /* 4. Butonları ekran genişliğine göre yay */
-    .btn-resume, .btn-explore {
-        width: 80% !important;
-        margin: 10px auto !important;
-        display: block !important;
-    }
-}
