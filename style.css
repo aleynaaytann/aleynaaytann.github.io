@@ -524,4 +524,23 @@ footer {
     align-items: center;
     gap: 8px; /* Ok işaretini metne göre hizalar */
 }
+/* --- MOBİL ÜST KISIM DÜZENLEMESİ --- */
+@media screen and (max-width: 600px) {
+    /* Üst kısımdaki boşlukları telefona göre ayarla */
+    .header, nav {
+        padding: 10px 5px !important;
+        margin-bottom: 10px !important;
+    }
 
+    /* Menü linklerini dikey yapmadan, sadece küçülterek yan yana tut */
+    .nav-links {
+        gap: 8px !important; /* Araları biraz aç */
+        font-size: 11px !important; /* Yazıları hafif küçült ki sığsın */
+    }
+
+    /* Başlık kısmının mobilde çok büyük durmaması için */
+    h1 {
+        font-size: 24px !important;
+        margin-top: 10px !important;
+    }
+}
