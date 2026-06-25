@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleyna Aytan | Dijital CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <div class="purple-aura"></div> <!-- Bu satırı ekle -->
+
+    <header>
+        <nav>
+            <div class="logo">Aleyna Aytan</div>
+            <div class="nav-links">
+    <a href="#projects">Projeler</a>
+    <a href="#experience">Deneyim</a>
+    <a href="#education">Eğitim & Sertifikalar</a>
+    <a href="#contact">İletişim</a>
+    
+    <div class="dropdown" onclick="toggleDropdown()">
+    <a href="#" class="btn-resume">Özgeçmiş</a>
+    <div id="cvDropdown" class="dropdown-content">
+        <a href="Aleyna_Aytan_CV_Türkçe.pdf" target="_blank" style="color:white; padding:10px; display:block; text-decoration:none;">Türkçe CV</a>
+        <a href="Aleyna_Aytan_CV_İngilizce.pdf" target="_blank" style="color:white; padding:10px; display:block; text-decoration:none;">İngilizce CV</a>
+    </div>
+</div>
+
+<script>
+    function toggleDropdown() {
+        var content = document.getElementById("cvDropdown");
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+</script>
+</div>
+
+</div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <span class="subtitle">3. SINIF ÖĞRENCİSİ</span>
+                <h1>Bilgisayar Mühendisliği</h1>
+                <p>Zarif kodlar ve titiz tasarımlarla dijital deneyimler üretiyorum.<br>Yazılım geliştirme ve etkileşimli sistemlere odaklanıyorum.</p>
+                <a href="#projects" class="btn-primary">Çalışmaları Keşfet</a>
+            </div>
+        </section>
+
+        
+
+        <section id="experience">
+            <h2>Deneyim & Topluluk</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">Yaz 2026</span>
+                    <h3>Yazılım Mühendisliği Stajyeri</h3>
+                    <span class="timeline-company">Advanced Information Technologies (A.I.T.)</span>
+                    <p>Yazılım geliştirme süreçlerinde aktif rol alma, kod optimizasyonu ve modern teknolojilerle kurumsal ölçekli proje deneyimi.</p>
+                </div>
+
+                <!-- Deneyim 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">2024 - Günümüz</span>
+                    <h3>Yabancı Dil Yetkinlikleri</h3>
+                    <span class="timeline-company">Sürekli Gelişim</span>
+                    <p>Teknik dokümantasyon okuma, araştırma ve uluslararası iletişim odaklı İngilizce (A2) ve temel düzeyde Almanca (A1) yetkinliği.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">2024 - Günümüz</span>
+                    <h3>Aktif Üye</h3>
+                    <span class="timeline-company">FI-TECH (Mühendislik ve Teknoloji Topluluğu)</span>
+                    <p>Teknoloji odaklı projelere katılım, mühendislik ekosisteminde bilgi paylaşımı ve topluluk etkinlikleri.</p>
+                </div>
+            </div>
+
+            <!-- Eğitim ve Sertifikalar Bölümü -->
+        <section id="education">
+            <h2>Eğitim & Sertifikalar</h2>
+            <div class="cert-grid">
+                
+                <!-- Üniversite -->
+                <div class="cert-card highlight-card">
+                    <span class="cert-year">2023 - 2027 (Beklenen)</span>
+                    <h3>Bilgisayar Mühendisliği (Lisans)</h3>
+                    <p>Mudanya Üniversitesi, Bursa</p>
+                </div>
+
+                <!-- Sertifikalar -->
+                <div class="cert-card">
+                    <span class="cert-year">2026</span>
+                    <h3>TSQL ile Veri Tabanı Programlama</h3>
+                    <p>BTK Akademi</p>
+                </div>
+                
+                <div class="cert-card">
+                    <span class="cert-year">2025</span>
+                    <h3>Uygulamalarla SQL Öğreniyorum</h3>
+                    <p>BTK Akademi</p>
+                </div>
+
+                <div class="cert-card">
+                    <span class="cert-year">2024</span>
+                    <h3>Sıfırdan İleri Seviye Python Programlama</h3>
+                    <p>BTK Akademi</p>
+                </div>
+
+                <div class="cert-card">
+                    <span class="cert-year">2024</span>
+                    <h3>Yapay Zekaya Giriş</h3>
+                    <p>BTK Akademi</p>
+                </div>
+
+                <div class="cert-card">
+                    <span class="cert-year">2023</span>
+                    <h3>C Programlama Dili</h3>
+                    <p>BTK Akademi</p>
+                </div>
+
+            </div>
+        </section>
+        </section>
+
+        <section id="projects">
+            <h2>Seçili Projeler</h2>
+            
+            <div class="bento-grid">
+                <div class="bento-card card-wide game-card-bg">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                        </div>
+                        <h3>Void Within</h3>
+                        <p>Unity ile geliştirilmiş atmosferik korku deneyimi. Özel asset tasarımları, dinamik aydınlatma ve karmaşık yapay zeka mekanikleri üzerine odaklanıldı.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card card-narrow flutter-app-bg">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                        </div>
+                        <h3>Mobil Şarj İstasyonu Uygulaması</h3>
+                        <p>Elektrikli araçlar için gerçek zamanlı harita entegrasyonuna sahip, minimalist tasarım sistemli mobil uygulama.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card card-narrow market-app-bg">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                        </div>
+                        <h3>Market Listesi Uygulaması</h3>
+                        <p>Eclipse ortamında geliştirilmiş temel akademik proje. Nesne yönelimli mimari ve veri yapıları kullanılarak optimize edildi.</p>
+                    </div>
+                </div>
+
+                <!-- Kart 4: Geniş Kart -->
+                <div class="bento-card card-wide state-diagram-bg">
+                    <div class="card-content">
+                        <!-- Tag'lerin ortalanması için style korundu -->
+                        <div class="tags" style="justify-content: center;">
+                            <span class="tag">Otomat Teorisi</span>
+                            <span class="tag">Visual Paradigm</span>
+                        </div>
+                        <h3>Sistem Modelleme ve Durum Diyagramı Tasarımı</h3>
+                        <p>Programlama Dilleri dersi kapsamında geliştirilen, teorik otomat altyapılı sistem projesi. Karmaşık durum geçişleri, algoritmik süreçler ve genel yazılım mimarisi Visual Paradigm aracı kullanılarak profesyonel standartlarda modellendi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- İletişim Bölümü -->
+        <section id="contact" style="text-align: center; padding: 120px 0 60px 0;">
+            <h2 style="font-size: 3.5rem; margin-bottom: 24px; letter-spacing: -1.5px;">Birlikte Çalışalım.</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 48px; font-size: 1.15rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                
+            </p>
+            
+            <!-- Butonlar Yan Yana -->
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <a href="mailto:aleynaaytan16@gmail.com" class="btn-primary">E-posta</a>
+                <a href="https://www.linkedin.com/in/aleyna-aytan-9624702a8" target="_blank" class="btn-primary">LinkedIn</a>
+                <a href="https://github.com/aleynaaytann" target="_blank" class="btn-primary">GitHub</a>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Aleyna Aytan. Hassasiyetle kodlanmıştır.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+    </footer>
+
+</body>
+</html>

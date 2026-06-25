@@ -1,0 +1,553 @@
+/* --- Global Ayarlar ve Renk Paleti --- */
+:root {
+    --bg-main: #111111;
+    --bg-card: #1C1C1E;
+    --text-primary: #FFFFFF;
+    --text-secondary: #999999;
+    --border-color: #2A2A2C;
+    --accent-color: #FFFFFF;
+    --font-main: 'Inter', -apple-system, sans-serif;
+}
+
+/* Mor Aura Efekti */
+.purple-aura {
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(188, 19, 254, 0.4) 0%, transparent 70%);
+    filter: blur(100px);
+    z-index: -1;
+    pointer-events: none; /* Mouse etkileşimini engeller */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Navigasyon (Header) --- */
+header {
+    width: 100%;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.btn-resume {
+    background-color: var(--text-primary);
+    color: var(--bg-main) !important;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: 600 !important;
+}
+
+.btn-resume:hover {
+    background-color: #e0e0e0;
+}
+
+/* --- Ortak Bölüm (Section) Ayarları --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+    letter-spacing: -1px;
+}
+
+/* --- Hero Bölümü --- */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 140px 0 100px 0;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: block;
+}
+
+#hero h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 1.1;
+    margin-bottom: 32px;
+}
+
+#hero p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 600px;
+    /* Yazıyı yatayda tam ortalamak için margin eklendi */
+    margin: 0 auto 48px auto; 
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 12px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    border-color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Deneyim Bölümü (Görseldeki Timeline) --- */
+.timeline {
+    border-left: 1px solid var(--border-color);
+    padding-left: 40px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -46.5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+}
+
+.timeline-item:not(:first-child) .timeline-dot {
+    background-color: var(--border-color);
+}
+
+.timeline-date {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timeline-item h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.timeline-company {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.timeline-item p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 700px;
+}
+
+/* --- Projeler Bölümü (Bento Grid) --- */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.bento-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 380px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+    border-color: #444;
+}
+
+.card-wide {
+    grid-column: span 2;
+}
+
+.card-narrow {
+    grid-column: span 1;
+}
+
+.card-wide.bg-gradient {
+    /* Kartın arka planına karanlık, hafif mor/koyu gri bir sis ve hafif bir vinyet ekliyoruz */
+    background: 
+        radial-gradient(circle at 70% 30%, rgba(147, 51, 234, 0.15) 0%, transparent 60%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        #1C1C1E;
+    background-size: cover;
+}
+
+.dashed-border {
+    background-color: transparent;
+    border: 1px dashed var(--border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dashed-border:hover {
+    border-color: var(--text-secondary);
+}
+
+.tags {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: #2A2A2C;
+    color: var(--text-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.bento-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.dashed-border h3 {
+    font-size: 1.4rem;
+}
+
+.bento-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Footer --- */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 48px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* --- Mobil Uyumluluk --- */
+@media (max-width: 900px) {
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-wide, .card-narrow {
+        grid-column: span 1;
+    }
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* --- Oyun Kartı Arka Plan Görseli --- */
+.game-card-bg {
+    /* Geçici bir korku temalı görsel linki ekledim. Kendi görselini kullanmak için alt satırı kullan: */
+    /* background-image: linear-gradient(to bottom, rgba(28, 28, 30, 0.2), rgba(28, 28, 30, 0.95)), url('korku-oyunu.jpg'); */
+    
+    background-image: linear-gradient(to bottom, rgba(28, 28, 30, 0.4), rgba(28, 28, 30, 0.95)), url('korku-oyunu.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border-color);
+}
+/* --- Mobil Şarj İstasyonu Kartı Görseli --- */
+.flutter-app-bg {
+    /* Kendi görselini kullanmak istersen url() içindeki linki kendi dosya adınla (örn: 'sarj-app.png') değiştir */
+    background-image: linear-gradient(to bottom, rgba(28, 28, 30, 0.5), rgba(28, 28, 30, 0.95)), url('otocharge.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border-color);
+}/* --- Market Listesi Kartı Görseli --- */
+.market-app-bg {
+    background-image: linear-gradient(to bottom, rgba(28, 28, 30, 0.4), rgba(28, 28, 30, 0.95)), url('market.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border-color);
+}
+/* --- Durum Diyagramı Kartı Görseli --- */
+.state-diagram-bg {
+    background-image: linear-gradient(to bottom, rgba(28, 28, 30, 0.4), rgba(28, 28, 30, 0.95)), url('otomat.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border-color);
+    /* Yazıların ortada kalmasını sağlamak için */
+    align-items: center;
+    text-align: center;
+}
+/* --- Eğitim ve Sertifikalar Alanı --- */
+#education {
+    padding: 50px 0 100px 0;
+}
+
+.cert-grid {
+    display: grid;
+    /* Ekran boyutuna göre yan yana dizecek veya alt alta alacak akıllı yapı */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.cert-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: #666;
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, rgba(28, 28, 30, 0.9), rgba(40, 40, 45, 0.9));
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cert-year {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.cert-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.cert-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+/* --- Dropdown Menü Stilleri --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--bg-card);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    z-index: 1000;
+    padding: 8px 0;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.dropdown-content a {
+    color: var(--text-primary) !important;
+    padding: 12px 16px !important;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    margin-left: 0 !important;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Butonun orijinal halini geri getiriyoruz */
+.btn-resume {
+    background-color: #ffffff !important; /* Beyaz arka plan */
+    color: #000000 !important;           /* Siyah yazı */
+    padding: 10px 24px !important;       /* Orijinal boyut */
+    border-radius: 25px !important;      /* Orijinal yuvarlatma */
+    font-weight: 600 !important;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+/* Dropdown içeriğinin düzgün görünmesi için küçük bir ayar */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Butonun hemen altına gelmesi için */
+    background-color: #1c1c1e; /* Sitenin koyu temasıyla uyumlu */
+    min-width: 150px;
+    border-radius: 12px;
+    margin-top: 8px;
+    border: 1px solid #333;
+    overflow: hidden;
+    z-index: 1000;
+}
+/* Butonu eski haline getiren stil */
+.btn-resume {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 10px 24px !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Ok işaretini metne göre hizalar */
+}
+/* Telefonlar için özel tasarım (Responsive) */
+@media screen and (max-width: 768px) {
+    /* 1. Menüyü dikey yap ve boşlukları düzenle */
+    .nav-links {
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-top: 20px !important;
+    }
+
+    /* 2. Başlıkları küçült */
+    h1 {
+        font-size: 28px !important; /* Başlığın telefonda taşmasını engeller */
+    }
+
+    /* 3. Paragraf yazıları daha okunaklı olsun */
+    p {
+        font-size: 15px !important;
+        padding: 0 15px !important;
+    }
+
+    /* 4. Butonları ekran genişliğine göre yay */
+    .btn-resume, .btn-explore {
+        width: 80% !important;
+        margin: 10px auto !important;
+        display: block !important;
+    }
+}
