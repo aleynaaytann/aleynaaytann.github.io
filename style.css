@@ -69,18 +69,11 @@ nav {
 }
 
 .btn-resume {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    padding: 10px 24px !important;
-    border-radius: 20px !important;
+    background-color: var(--text-primary);
+    color: var(--bg-main) !important;
+    padding: 8px 24px;
+    border-radius: 20px;
     font-weight: 600 !important;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: inherit;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .btn-resume:hover {
@@ -475,7 +468,19 @@ footer {
     display: block;
 }
 
-
+/* Butonun orijinal halini geri getiriyoruz */
+.btn-resume {
+    background-color: #ffffff !important; /* Beyaz arka plan */
+    color: #000000 !important;           /* Siyah yazı */
+    padding: 10px 24px !important;       /* Orijinal boyut */
+    border-radius: 25px !important;      /* Orijinal yuvarlatma */
+    font-weight: 600 !important;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    transition: transform 0.2s;
+}
 
 /* Dropdown içeriğinin düzgün görünmesi için küçük bir ayar */
 .dropdown-content {
@@ -491,7 +496,21 @@ footer {
     overflow: hidden;
     z-index: 1000;
 }
-
+/* Butonu eski haline getiren stil */
+.btn-resume {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 10px 24px !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Ok işaretini metne göre hizalar */
+}
 /* --- MOBİL ÜST KISIM DÜZENLEMESİ --- */
 @media screen and (max-width: 600px) {
     /* Üst kısımdaki boşlukları telefona göre ayarla */
@@ -545,6 +564,17 @@ body {
 /* 3. Tüm içeriklerini (yazılar, butonlar) auranın ÜSTÜNE çıkarıyoruz */
 /* 3. Tüm içeriklerini (yazılar, butonlar) auranın ÜSTÜNE çıkarıyoruz */
 header, section, main, footer {
+    position: relative !important;
+    z-index: 10 !important;
+}
+/* Açılır menünün alt kısımlarının tıklanabilmesi için Header'ı en üste al */
+header {
+    position: relative !important;
+    z-index: 9999 !important; 
+}
+
+/* Sitenin geri kalanı menünün altında kalsın */
+main, section {
     position: relative !important;
     z-index: 10 !important;
 }
