@@ -9,19 +9,6 @@
     --font-main: 'Inter', -apple-system, sans-serif;
 }
 
-/* Mor Aura Efekti */
-.purple-aura {
-    position: fixed;
-    top: -200px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(188, 19, 254, 0.4) 0%, transparent 70%);
-    filter: blur(100px);
-    z-index: -1;
-    pointer-events: none; /* Mouse etkileşimini engeller */
-}
 
 * {
     margin: 0;
@@ -82,11 +69,18 @@ nav {
 }
 
 .btn-resume {
-    background-color: var(--text-primary);
-    color: var(--bg-main) !important;
-    padding: 8px 24px;
-    border-radius: 20px;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 10px 24px !important;
+    border-radius: 20px !important;
     font-weight: 600 !important;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .btn-resume:hover {
@@ -481,19 +475,7 @@ footer {
     display: block;
 }
 
-/* Butonun orijinal halini geri getiriyoruz */
-.btn-resume {
-    background-color: #ffffff !important; /* Beyaz arka plan */
-    color: #000000 !important;           /* Siyah yazı */
-    padding: 10px 24px !important;       /* Orijinal boyut */
-    border-radius: 25px !important;      /* Orijinal yuvarlatma */
-    font-weight: 600 !important;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    display: inline-block;
-    transition: transform 0.2s;
-}
+
 
 /* Dropdown içeriğinin düzgün görünmesi için küçük bir ayar */
 .dropdown-content {
@@ -509,21 +491,7 @@ footer {
     overflow: hidden;
     z-index: 1000;
 }
-/* Butonu eski haline getiren stil */
-.btn-resume {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    padding: 10px 24px !important;
-    border-radius: 20px !important;
-    font-weight: 600 !important;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: inherit;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px; /* Ok işaretini metne göre hizalar */
-}
+
 /* --- MOBİL ÜST KISIM DÜZENLEMESİ --- */
 @media screen and (max-width: 600px) {
     /* Üst kısımdaki boşlukları telefona göre ayarla */
@@ -554,4 +522,29 @@ footer {
         display: block !important;
         width: 100% !important;
     }
+}
+/* 1. Arka planı garantiye alıyoruz */
+body {
+    background-color: #0b0b0b !important; /* Hafif kırık siyah, aurayı daha iyi gösterir */
+    position: relative;
+}
+
+/* 2. Aurayı eksi değerden kurtarıp görünür yapıyoruz */
+.purple-aura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Opaklığı 0.4'ten 0.8'e çıkardım ki ekranda patlasın, çalıştığını net görelim */
+    background: radial-gradient(circle at 50% 0%, rgba(188, 19, 254, 1) 0%, transparent 70%) !important;
+    z-index: 1 !important; /* Artık negatif değil, sayfanın zemininde */
+    pointer-events: none;
+}
+
+/* 3. Tüm içeriklerini (yazılar, butonlar) auranın ÜSTÜNE çıkarıyoruz */
+/* 3. Tüm içeriklerini (yazılar, butonlar) auranın ÜSTÜNE çıkarıyoruz */
+header, section, main, footer {
+    position: relative !important;
+    z-index: 10 !important;
 }
